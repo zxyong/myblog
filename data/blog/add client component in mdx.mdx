@@ -1,0 +1,27 @@
+---
+title: '在mdx文件中加入组件'
+date: 2025-09-21
+tags: ['MDX', 'React', 'component']
+---
+
+# 如何在mdx文章中加入特定组件，比如一个时间转换的TimeConverter
+
+1. 在components下增加TimeConverter.tsx文件，文件首行要增加'use client'
+1. 在components下的MDXComponents.tsx中增加
+1. 在/data/blog目录下的mdx文件中增加`<TimeConverter />`即可。
+
+## Inline code
+
+```
+import TimeConverter from './TimeConverter'
+export const components: MDXComponents = {
+  Image,
+  TOCInline,
+  a: CustomLink,
+  pre: Pre,
+  table: TableWrapper,
+  BlogNewsletterForm,
+  TimeConverter,
+}
+export default MDXComponents
+```
