@@ -16,5 +16,3 @@ export const components: MDXComponents = {
   BlogNewsletterForm,
   TimeConverter,
 }
-
-export default MDXComponents
